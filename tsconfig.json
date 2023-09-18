@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,9 +23,29 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.js",
+    "**/*.jsx",
+    ".next/types/**/*.js",
+    "src/component/Card.tsx",
+    "src/component/CommentCard.jsx",
+    "src/component/Footer.jsx",
+    "src/component/Header.jsx",
+    "src/app/work/page.tsx",
+    "src/app/blog/[id]/page.jsx",
+    "src/app/blog/page.jsx",
+    "src/app/contact/page.tsx",
+    "src/app/layout.tsx",
+    "src/app/page.jsx",
+    ".next/types/**/*.ts"
+, "next.config.ts", "next.config.ts", "src/app/registry.tsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

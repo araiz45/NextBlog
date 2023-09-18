@@ -1,20 +1,22 @@
 "use client"
 import styled from "styled-components";
 import Link from "next/link"
-import {BiLogoFacebookCircle, BiLogoInstagramAlt, BiLogoLinkedinSquare} from "react-icons/bi"
+import {BiLogoFacebookCircle, BiLogoInstagramAlt, BiLogoLinkedinSquare, BiLogoTwitter} from "react-icons/bi"
 
 const Footer = () => {
+    let date = new Date()
+    let year = date.getFullYear();
     return (
         <FooterContainer>
             <div className="text-container">
-                <h2>Inspireme</h2>
+                <h2>Aaraiz Zahid</h2>
                 <div>|</div>
-                <h3>Copyright &copy; 2023 Inspireme.com</h3>
+                <h3>Copyright &copy; {year} araizzahid.io</h3>
             </div>
             <div className="icons-container">
-              <Link href={"/"}><BiLogoFacebookCircle /></Link>  
-               <Link href={"/"}><BiLogoInstagramAlt /></Link> 
-                <Link href={"/"}><BiLogoLinkedinSquare /></Link>
+              <Link href={"https://twitter.com/ZahidAraiz"} target="_blank"><BiLogoTwitter /></Link>  
+               <Link href={"https://www.instagram.com/araizzahid45/"} target="_blank"><BiLogoInstagramAlt /></Link> 
+                <Link href={"https://www.linkedin.com/in/aaraiz-baig-81015a260/"} target="_blank"><BiLogoLinkedinSquare /></Link>
             </div>
 
         </FooterContainer>
@@ -54,6 +56,15 @@ h3{
     gap: 1.2rem;
     color: #FAF1E4;
     
+}
+@media only screen and (max-width: 700px)  {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+    .text-container{
+        flex-direction: column;
+        gap: 0;
+    }
 }
 
 `

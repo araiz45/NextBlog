@@ -1,23 +1,22 @@
 "use client";
 import styled from "styled-components";
 import Link from "next/link";
-const Card = () => {
-  
+const Card = ({data, id}) => {
+  let date = new Date(data.publishedAt);
+  let anotherDate = date.toDateString();
   return (
     <>
       <Container className="card">
         <h2>
-          How to deploy flask app on Ubuntu 22.04 VPS using Nginx and gunicorn
+          {data.Title}
         </h2>
         <h5>
-          Araix . <em>July 1, 2023</em>
+          Araix . <em>{anotherDate}</em>
         </h5>
         <p>
-          In this post, we will see how to deploy flask applications using
-          gunicorn WSGI server and nginx as a reverse proxy and static files
-          server.
+          {data.summary}
         </p>
-        <Link href={"/blog/3"}>Read More</Link>
+        <Link href={`/blog/${id}`}>Read More</Link>
       </Container>
     </>
   );

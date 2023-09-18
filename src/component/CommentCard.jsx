@@ -1,10 +1,12 @@
 import styled from 'styled-components'
-const CommentCard = () =>{
+const CommentCard = ({data}) =>{
+    let date = new Date(data.publishedAt);
+    let anotherDate = date.toDateString();
     return (
         <CommentWrapper>
             <CommentContainer className="comment-card">
-                <h3>Admin <div>23-3-2</div></h3>
-                <p>Create an E-commerce website please 🥰</p>
+                <h3>{data.user} <div>{anotherDate}</div></h3>
+                <p>{data.comment}</p>
             </CommentContainer>
         </CommentWrapper>
     )
@@ -24,6 +26,7 @@ h3{
     gap: .5rem;
     div{
         font-weight: 500;
+        font-size: .9rem;
     }
 }
 
